@@ -65,8 +65,9 @@ public class StudentRepository {
             students = studentTeacherMap.get(teacherName);
             for (String s : students) {
                 if(studentMap.containsKey(s))
-                  students.remove(s);
+                    studentMap.remove(s);
             }
+            studentTeacherMap.remove(teacherName);
         }
         if(teacherMap.containsKey(teacherName))
         teacherMap.remove(teacherName);
